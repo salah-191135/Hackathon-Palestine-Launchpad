@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login</title>
-    <link rel="stylesheet" href="../styles/login-style.css">
-    <!-- <script src="../index.js" defer></script> -->
+
 
 </head>
 
@@ -14,7 +13,9 @@
     <div class="left">
         <h1>📚<br> Join Now & Get Your AI-Powered <span>Learning Path!</span></h1>
         <p>Tell us a bit about yourself and we'll craft a customized learning journey based on your experience,
-            interests and aspirations</p>
+            interests and aspirations
+        </p>
+        <img src="../assets/ll2.png" alt="no image">
         <svg class="divider " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2.17 35.28" preserveAspectRatio="none">
             <path d="M.5 35.28C1.04 32.2.07 26 .5 19.13.9 12.26 1.06 5.4.38 0H0v35.28z" fill="#4A91BF" />
             <!-- <path
@@ -27,7 +28,33 @@
     </div>
 
     <div class="right">
-        <div class="form-container">
+
+        <!-- signin form -->
+        <div id="SigninForm" class="form-container show">
+            <p>Signin</p>
+            <form>
+
+                <div class="user-box">
+                    <input required="" name="email" type="text">
+                    <label>Email</label>
+                </div>
+                <div class="user-box">
+                    <input required="" name="" type="password">
+                    <label>Password</label>
+                </div>
+                <a href="#">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Signin
+                </a>
+            </form>
+            <p>Don't have an account? <a id="toggleForm" href="#" class="a2">Register here!</a></p>
+        </div>
+
+        <!-- register form -->
+        <div id="RegisterForm" class="form-container hide">
             <p>Register</p>
             <form>
                 <div class="user-box">
@@ -65,7 +92,7 @@
                     Create Your Account
                 </a>
             </form>
-            <p>Already have an account? <a href="" class="a2">Sign in!</a></p>
+            <p>Already have an account? <a id="toggleForm" href="" class="a2">Sign in!</a></p>
         </div>
     </div>
 </body>

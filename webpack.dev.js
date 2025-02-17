@@ -26,6 +26,10 @@ module.exports = {
             template: "./src/client/views/register.html",
             filename: "./register.html",
         }),
+        new HtmlWebPackPlugin({
+            template: "./src/client/views/index.html",
+            filename: "./index.html",
+        }),
         new CleanWebpackPlugin({
             // Simulate the removal of files
             dry: true,
@@ -37,7 +41,10 @@ module.exports = {
         })
     ],
     devServer: {
-        port: 5005,
-        allowedHosts: 'all'
-    }
+        static: {
+            directory: path.join(__dirname, 'dist'),
+        },
+        compress: true,
+        port: 3000,
+    },
 }
