@@ -1,0 +1,292 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+}
+
+.divider {
+    position: absolute;
+    right: 50%;
+    top: 0;
+    height: 100%;
+    width: 10%;
+}
+
+.custom-pattern {
+    background:
+        linear-gradient(-45deg, #0000 1.3%, #4A91BF 0 32%, #0000 0),
+        linear-gradient(45deg, #0000 48%, #FFFEFF 0 52%, #0000 0),
+        linear-gradient(45deg, #0000 1.3%, #4A91BF 0 32%, #0000 0) calc(32px/2) calc(32px/2),
+        linear-gradient(-45deg, #0000 48%, #FFFEFF 0 52%, #0000 0) #4A91BF;
+    background-size: calc(2*32px) 32px, 32px 32px;
+}
+
+.left {
+    background-color: #4A91BF;
+    color: white;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 50px;
+}
+
+.left h1 {
+    font-size: 3.5rem;
+}
+
+.left span {
+    color: #373679;
+    font-weight: bold;
+}
+
+.left p {
+    font-size: 2.2rem;
+    line-height: 1.5;
+    letter-spacing: 1px;
+}
+
+.right {
+    margin-left: 10%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-container {
+    position: relative;
+    top: -15%;
+    width: 100%;
+    padding: 40px;
+}
+
+.form-container p:first-child {
+    margin: 0 0 30px;
+    color: #4A91BF;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+
+.form-container .user-box {
+    position: relative;
+}
+
+.form-container .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #4A91BF;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #4A91BF;
+    outline: none;
+}
+
+.form-container .user-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #4A91BF;
+    pointer-events: none;
+    transition: .5s;
+}
+
+
+.form-container .user-box input:focus~label,
+.form-container .user-box input:valid~label {
+    top: -20px;
+    left: 0;
+    color: #4A91BF;
+    font-size: 12px;
+}
+
+.form-container form a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    font-weight: bold;
+    color: #FFFEFF;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 3px;
+    background: #4A91BF;
+    border-radius: 8px;
+    margin-bottom: 5px;
+}
+
+.form-container a:hover {
+    background: #373679;
+}
+
+.form-container a span {
+    position: absolute;
+    display: block;
+}
+
+.form-container a span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #373679);
+    animation: btn-anim1 1.5s linear infinite;
+}
+
+
+@keyframes btn-anim1 {
+    0% {
+        left: -100%;
+    }
+
+    50%,
+    100% {
+        left: 100%;
+    }
+}
+
+.form-container a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #373679);
+    animation: btn-anim2 1.5s linear infinite;
+    animation-delay: .375s
+}
+
+@keyframes btn-anim2 {
+    0% {
+        top: -100%;
+    }
+
+    50%,
+    100% {
+        top: 100%;
+    }
+}
+
+.form-container a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(270deg, transparent, #373679);
+    animation: btn-anim3 1.5s linear infinite;
+    animation-delay: .75s
+}
+
+@keyframes btn-anim3 {
+    0% {
+        right: -100%;
+    }
+
+    50%,
+    100% {
+        right: 100%;
+    }
+}
+
+.form-container a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #373679);
+    animation: btn-anim4 1.5s linear infinite;
+    animation-delay: 1.125s
+}
+
+@keyframes btn-anim4 {
+    0% {
+        bottom: -100%;
+    }
+
+    50%,
+    100% {
+        bottom: 100%;
+    }
+}
+
+
+.form-container p:last-child {
+    color: #aaa;
+    font-size: 14px;
+}
+
+.form-container a.a2 {
+    color: #4A91BF;
+    text-decoration: none;
+}
+
+.form-container a.a2:hover {
+    background: transparent;
+    color: #373679;
+    border-radius: 5px;
+}
+
+
+/* custom select */
+/* ****************************************************************** */
+
+.user-select {
+    position: relative;
+}
+
+.user-select label {
+    padding: 10px 0;
+    font-size: 16px;
+    color: #4A91BF;
+    pointer-events: none;
+}
+
+
+.user-select select {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px 10px 5px 10px;
+    background-color: #FFFEFF;
+    border: 2px solid #373679;
+    border-radius: 8px;
+    color: #4A91BF;
+    cursor: pointer;
+    outline: none;
+    margin: 5px 0;
+}
+
+.user-select select:focus {
+    background: #F2F2F2;
+    border: 1px solid #373679;
+    border-radius: 5px;
+}
+
+.user-select::after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    top: 70%;
+    right: 10px;
+    transform: translate(0, -50%);
+    width: 12px;
+    height: 12px;
+    background-color: #4A91BF;
+    clip-path: polygon(8% 17%, 0% 25%, 50% 84%, 100% 25%, 92% 17%, 50% 65%);
+}

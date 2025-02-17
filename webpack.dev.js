@@ -17,14 +17,14 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
-                use: [ 'style-loader', 'css-loader', 'sass-loader' ]
-        }
+                use: ['style-loader', 'css-loader', 'sass-loader']
+            }
         ]
     },
     plugins: [
         new HtmlWebPackPlugin({
-            template: "./src/client/views/index.html",
-            filename: "./index.html",
+            template: "./src/client/views/register.html",
+            filename: "./register.html",
         }),
         new CleanWebpackPlugin({
             // Simulate the removal of files
@@ -37,7 +37,7 @@ module.exports = {
         })
     ],
     devServer: {
-        port: 3000,
+        port: 5005,
         allowedHosts: 'all'
     }
 }
