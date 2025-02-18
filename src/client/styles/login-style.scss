@@ -76,6 +76,7 @@ body {
     display: flex;
     height: 100vh;
     overflow: hidden;
+    font-family: "Tahoma", sans-serif;
 }
 
 .divider {
@@ -131,7 +132,7 @@ body {
 }
 
 .form-container.show {
-    animation: slide 200ms ease-in-out forwards;
+    animation: slide 500ms ease-in-out forwards;
     display: block;
 }
 
@@ -139,7 +140,7 @@ body {
     display: none;
     position: absolute;
     top: 0%;
-    width: 40%; 
+    width: 40%;
     padding: 40px;
 
     p {

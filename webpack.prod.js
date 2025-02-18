@@ -4,11 +4,15 @@ const HtmlWebPackPlugin = require("html-webpack-plugin")
 const WorkboxPlugin = require('workbox-webpack-plugin');
 
 module.exports = {
-    entry: './src/client/index.js',
+
+    entry: {
+        home: "./src/client/js/home.js",
+        register: "./src/client/js/register.js",
+    },
     output: {
-        filename: 'bundle.js',
-        path: path.resolve(__dirname, 'dist'),
-        assetModuleFilename: 'images/[hash][ext][query]', // Custom output path for images
+        filename: "js/[name].bundle.js",
+        path: path.resolve(__dirname, "dist"),
+        clean: true,
     },
     mode: 'production',
     module: {
@@ -20,7 +24,14 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
-                use: ['style-loader', 'css-loader', 'sass-loader']
+                use: ['style-loader',
+                    'css-loader', {
+                        loader: "sass-loader",
+                        options: {
+                            implementation: require("sass"), // ✅ Fix for Dart Sass
+                        },
+                    },
+                ],
             },
             {
                 test: /\.html$/,
@@ -36,10 +47,12 @@ module.exports = {
         new HtmlWebPackPlugin({
             template: "./src/client/views/register.html",
             filename: "./register.html",
+            chunks: ['register'],
         }),
         new HtmlWebPackPlugin({
             template: "./src/client/views/index.html",
             filename: "./index.html",
+            chunks: ['home'],
         }),
         new WorkboxPlugin.GenerateSW()
     ],
