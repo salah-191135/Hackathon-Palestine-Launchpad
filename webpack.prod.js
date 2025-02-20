@@ -8,6 +8,8 @@ module.exports = {
     entry: {
         home: "./src/client/js/home.js",
         register: "./src/client/js/register.js",
+        dashboard: "./src/client/js/dashboard.js",
+
     },
     output: {
         filename: "js/[name].bundle.js",
@@ -53,6 +55,11 @@ module.exports = {
             template: "./src/client/views/index.html",
             filename: "./index.html",
             chunks: ['home'],
+        }),
+        new HtmlWebPackPlugin({
+            template: "./src/client/views/dashboard.html",
+            filename: "./dashboard.html",
+            chunks: ['dashboard'],
         }),
         new WorkboxPlugin.GenerateSW()
     ],
