@@ -1,11 +1,213 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description"
+        content="Learning Hub - Personalized learning platform with course recommendations and progress tracking">
+    <title>Learning Hub Dashboard</title>
 </head>
+
 <body>
-    
+    <div class="learning-hub">
+        <aside class="sidebar" aria-label="Main navigation">
+            <header class="sidebar-header">
+                <img src="../assets/profile.jpg" alt="Learning Hub logo" width="120" height="40" loading="lazy">
+                <h1>PATH4U</h1>
+            </header>
+
+            <nav aria-label="Primary navigation">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#profile-heading" class="nav-link active" aria-current="page">
+                            <div class="nav-icon"><img src="../assets/user.png" alt="user"></div>
+                            Profile
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#recommendations-heading" class="nav-link">
+                            <div class="nav-icon"><img src="../assets/like.png" alt="user"></div>
+                            Recommendations
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#progress-heading" class="nav-link">
+                            <div class="nav-icon"><img src="../assets/check.png" alt="user"></div>
+                            progress
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#next-steps-heading" class="nav-link">
+                            <div class="nav-icon"><img src="../assets/next.png" alt="user"></div>
+                            next steps
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#logout" class="nav-link">
+                            <div class="nav-icon"><img src="../assets/sign-out-alt.png" alt="user"></div>
+                            log out
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content" id="main-content">
+
+            <section id="profile-heading" class="course-section profile" data-nav="Section 1"
+                aria-labelledby="profile-heading">
+                <header class="section-header">
+                    <h2>Profile Overview</h2>
+                </header>
+                <div class="profile-overview">
+                    <div class="profile-details">
+                        <h3 class="profile-name">John Doe</h3>
+                        <p class="profile-email">john.doe@example.com</p>
+                        <div class="profile-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">15</span>
+                                <span class="stat-label">Courses Completed</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">120</span>
+                                <span class="stat-label">Hours Spent</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">4.7</span>
+                                <span class="stat-label">Average Rating</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="recommendations-heading" class="course-section recommendations"
+                aria-labelledby="recommendations-heading">
+                <header class="section-header">
+                    <h2>Personalized Recommendations</h2>
+                </header>
+
+                <div class="course-flex">
+
+                    <article class="course-card">
+                        <div class="course-header">
+                            <h3 class="course-title">JavaScript Fundamentals</h3>
+                            <div class="course-meta">
+                                <span class="rating">⭐ 4.7/5</span>
+                                <span class="duration">⏳ 3 hours</span>
+                            </div>
+                        </div>
+                        <p class="course-description">Learn the basics of JavaScript, including variables, functions,
+                            and DOM manipulation.</p>
+                        <button class="cta-button" aria-label="Start JavaScript Fundamentals course">
+                            Start Course
+                        </button>
+                    </article>
+
+                    <!-- Course 2: Advanced CSS Techniques -->
+                    <article class="course-card">
+                        <div class="course-header">
+                            <h3 class="course-title">Advanced CSS Techniques</h3>
+                            <div class="course-meta">
+                                <span class="rating">⭐ 4.6/5</span>
+                                <span class="duration">⏳ 4 hours</span>
+                            </div>
+                        </div>
+                        <p class="course-description">Explore advanced CSS concepts like Flexbox, Grid, animations, and
+                            responsive design.</p>
+                        <button class="cta-button" aria-label="Resume Advanced CSS Techniques course">
+                            Resume Course
+                        </button>
+                    </article>
+
+                    <!-- Course 3: Python for Beginners -->
+                    <article class="course-card">
+                        <div class="course-header">
+                            <h3 class="course-title">Python for Beginners</h3>
+                            <div class="course-meta">
+                                <span class="rating">⭐ 4.8/5</span>
+                                <span class="duration">⏳ 5 hours</span>
+                            </div>
+                        </div>
+                        <p class="course-description">Get started with Python programming, covering syntax, data
+                            structures, and basic algorithms.</p>
+                        <button class="cta-button" aria-label="Start Python for Beginners course">
+                            Start Course
+                        </button>
+                    </article>
+
+                    <!-- Course 4: React.js Crash Course -->
+                    <article class="course-card">
+                        <div class="course-header">
+                            <h3 class="course-title">React.js Crash Course</h3>
+                            <div class="course-meta">
+                                <span class="rating">⭐ 4.9/5</span>
+                                <span class="duration">⏳ 6 hours</span>
+                            </div>
+                        </div>
+                        <p class="course-description">Build modern web applications with React.js, including hooks,
+                            state management, and routing.</p>
+                        <button class="cta-button" aria-label="Start React.js Crash Course">
+                            Start Course
+                        </button>
+                    </article>
+                </div>
+            </section>
+
+            <section id="progress-heading" class="course-section progress" aria-labelledby="progress-heading">
+                <header class="section-header">
+                    <h2>Current Learning Path</h2>
+                </header>
+
+                <div class="progress-tracker">
+                    <div class="course-progress">
+                        <h3>Advanced CSS Techniques</h3>
+                        <div class="progress-bar">
+                            <progress value="50" max="100" aria-labelledby="css-progress-label"></progress>
+                        </div>
+                        <span id="css-progress-label" class="progress-label">50% complete</span>
+                    </div>
+                </div>
+
+                <div class="progress-tracker">
+                    <div class="course-progress">
+                        <h3>Python for Beginners</h3>
+                        <div class="progress-bar">
+                            <progress value="24" max="100" aria-labelledby="css-progress-label"></progress>
+                        </div>
+                        <span id="css-progress-label" class="progress-label">24% complete</span>
+                    </div>
+                </div>
+
+                <div class="progress-tracker">
+                    <div class="course-progress">
+                        <h3>React.js Crash Course</h3>
+                        <div class="progress-bar">
+                            <progress value="88" max="100" aria-labelledby="css-progress-label"></progress>
+                        </div>
+                        <span id="css-progress-label" class="progress-label">88% complete</span>
+                    </div>
+                </div>
+            </section>
+
+            <section id="next-steps-heading" class="course-section next-steps" aria-labelledby="next-steps-heading">
+                <header class="section-header">
+                    <h2>Next Steps</h2>
+                </header>
+
+                <div class="action-list">
+                    <div class="action-item">
+                        <h2>Start Advanced JavaScript</h2>
+                        <button class="cta-button cta-primary" aria-label="Start JavaScript Fundamentals course">
+                            Start Now
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
 </body>
+
 </html>

@@ -28,7 +28,7 @@ module.exports = {
                     'css-loader', {
                         loader: "sass-loader",
                         options: {
-                            implementation: require("sass"), // ✅ Fix for Dart Sass
+                            implementation: require("sass"),
                         },
                     },
                 ],

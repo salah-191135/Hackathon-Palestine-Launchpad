@@ -1,4 +1,6 @@
 import '../styles/login-style.scss';
+import '../styles/resets.scss';
+
 // alert("i am working");
 
 function hideForm(event) {
