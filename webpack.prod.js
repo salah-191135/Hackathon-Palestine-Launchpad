@@ -41,7 +41,10 @@ module.exports = {
             },
             {
                 test: /\.(png|jpg|jpeg|gif|svg)$/i,
-                type: 'asset/resource', // Moves image files to the output folder
+                type: 'asset/resource',
+                generator: {
+                    filename: 'images/[name][ext]',
+                },
             },
         ]
     },
@@ -57,7 +60,7 @@ module.exports = {
             chunks: ['home'],
         }),
         new HtmlWebPackPlugin({
-            template: "./src/client/views/dashboard.html",
+            template: "./src/client/views/dashboardV2.html",
             filename: "./dashboard.html",
             chunks: ['dashboard'],
         }),

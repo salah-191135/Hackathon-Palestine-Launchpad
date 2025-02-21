@@ -52,7 +52,7 @@ module.exports = {
             chunks: ['home'],
         }),
         new HtmlWebPackPlugin({
-            template: "./src/client/views/dashboard.html",
+            template: "./src/client/views/dashboardV2.html",
             filename: "./dashboard.html",
             chunks: ['dashboard'],
         }),

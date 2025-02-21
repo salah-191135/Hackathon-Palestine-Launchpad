@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Learning Hub - Personalized learning platform with course recommendations and progress tracking">
+    <title>Learning Hub Dashboard</title>
+    <link rel="stylesheet" href="../styles/dashboardd-style.css">
+    <link rel="stylesheet" href="../styles/btn.css">
+</head>
+
+<body>
+    <main class="learning-hub">
+        <section id="sidebar">
+            <nav aria-label="Primary navigation">
+                <ul class="nav-list">
+
+                    <li class="nav-item">
+                        <a href="#recommendations-heading" class="nav-link">
+                            <img class="nav-icon" src="../assets/home.png" alt="user">
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#logout" class="nav-link">
+                            <img class="nav-icon" src="../assets/sign-out-alt.png" alt="user">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+
+        <section id="profile" aria-labelledby="profile-heading">
+
+            <div class="profile-image">
+                <img src="../assets/profile.jpg" alt="Profile picture of John Doe" width="100" height="100"
+                    loading="lazy">
+                <h3 class="profile-name" id="profile-heading">John Doe</h3>
+            </div>
+
+            <div class="profile-details">
+                <p class="profile-summary">
+                    Based on your profile analysis, here's a snapshot of your current status and our recommendations:
+                </p>
+                <div class="profile-stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Background:</span>
+                        <p class="stat-details">
+                            You have a solid foundation in programming, particularly with Python, and basic familiarity
+                            with web development concepts.
+                        </p>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Strengths:</span>
+                        <p class="stat-details">
+                            Your problem-solving skills and enthusiasm for learning make you well-suited for diving
+                            deeper into technical fields.
+                        </p>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Learning Goals:</span>
+                        <p class="stat-details">
+                            You're aiming to transition into AI and Data Science, building on your existing skills while
+                            exploring new methodologies and tools.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="recommendations" class="course-section recommendations" aria-labelledby="recommendations-heading">
+
+            <header class="section-header">
+                <h2>Personalized Recommendations</h2>
+            </header>
+
+            <div class="course-flex">
+                <article class="course-card">
+                    <div class="course-header">
+                        <h3 class="course-title">JavaScript Fundamentals</h3>
+                        <p class="course-description">Learn the basics of JavaScript, including variables, functions,
+                            and DOM manipulation.</p>
+                    </div>
+                    <div class="course-tail">
+                        <div class="course-meta">
+                            <span class="rating">⭐ 4.9/5</span>
+                            <span class="duration">⏳ 3 hours</span>
+                        </div>
+                        <a class="button" href="#" aria-label="Start JavaScript Fundamentals course">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Start Course
+                        </a>
+                    </div>
+                </article>
+
+                <article class="course-card">
+                    <div class="course-header">
+                        <h3 class="course-title">Advanced CSS Techniques</h3>
+                        <p class="course-description">Explore advanced CSS concepts like Flexbox, Grid, animations,
+                            andresponsive design.</p>
+                    </div>
+                    <div class="course-tail">
+                        <div class="course-meta">
+                            <span class="rating">⭐ 4.6/5</span>
+                            <span class="duration">⏳ 4 hours</span>
+                        </div>
+                        <a class="button" href="#" aria-label="Resume Advanced CSS Techniques course">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Resume Course
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Course 3: Python for Beginners -->
+                <article class="course-card">
+                    <div class="course-header">
+                        <h3 class="course-title">Python for Beginners</h3>
+                        <p class="course-description">Get started with Python programming, covering syntax, data
+                            structures, and basic algorithms.</p>
+                    </div>
+                    <div class="course-tail">
+                        <div class="course-meta">
+                            <span class="rating">⭐ 4.8/5</span>
+                            <span class="duration">⏳ 5 hours</span>
+                        </div>
+                        <a class="button" href="#" aria-label="Resume React.js Crash Course">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Resume Course
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Course 4: React.js Crash Course -->
+                <article class="course-card">
+                    <div class="course-header">
+                        <h3 class="course-title">React.js Crash Course</h3>
+                        <p class="course-description">Build modern web applications with React.js, including hooks,
+                            state management, and routing.</p>
+                    </div>
+                    <div class="course-tail">
+                        <div class="course-meta">
+                            <span class="rating">⭐ 4.9/5</span>
+                            <span class="duration">⏳ 6 hours</span>
+                        </div>
+                        <a class="button" href="#" aria-label="Resume React.js Crash Course">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Resume Course
+                        </a>
+                    </div>
+                </article>
+            </div>
+
+        </section>
+
+        <div id="extra">
+            <div class="stats-box">
+                <h1>your stats</h1>
+                <div class="s-box s-courses">
+                    <span class="s-value">15</span>
+                    <span class="s-label">Courses Completed</span>
+                </div>
+                <div class="s-box s-hours">
+                    <span class="s-value">120</span>
+                    <span class="s-label">Hours Spent</span>
+                </div>
+                <div class="s-box s-rating">
+                    <span class="s-value">4.7</span>
+                    <span class="s-label">Average Rating</span>
+                </div>
+            </div>
+            <div class="box">
+                <div class="percent">
+                    <svg>
+                        <circle cx="70" cy="70" r="70"></circle>
+                        <circle cx="70" cy="70" r="70"></circle>
+                    </svg>
+                    <div class="num">
+                        <h2>87<span>%</span></h2>
+                    </div>
+                </div>
+                <h2 class="text">LEVEL ONE</h2>
+            </div>
+
+        </div>
+    </main>
+</body>
+
+</html>
