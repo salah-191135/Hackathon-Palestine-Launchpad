@@ -18,13 +18,13 @@
                 <ul class="nav-list">
 
                     <li class="nav-item">
-                        <a href="#recommendations-heading" class="nav-link">
+                        <a id="homeBtn" href="#recommendations-heading" class="nav-link">
                             <img class="nav-icon" src="../assets/home.png" alt="user">
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="#logout" class="nav-link">
+                        <a id="logoutBtn" href="" class="nav-link">
                             <img class="nav-icon" src="../assets/sign-out-alt.png" alt="user">
                         </a>
                     </li>
@@ -77,92 +77,8 @@
                 <h2>Personalized Recommendations</h2>
             </header>
 
-            <div class="course-flex">
-                <article class="course-card">
-                    <div class="course-header">
-                        <h3 class="course-title">JavaScript Fundamentals</h3>
-                        <p class="course-description">Learn the basics of JavaScript, including variables, functions,
-                            and DOM manipulation.</p>
-                    </div>
-                    <div class="course-tail">
-                        <div class="course-meta">
-                            <span class="rating">⭐ 4.9/5</span>
-                            <span class="duration">⏳ 3 hours</span>
-                        </div>
-                        <a class="button" href="#" aria-label="Start JavaScript Fundamentals course">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            Start Course
-                        </a>
-                    </div>
-                </article>
+            <div id="courses" class="course-flex">
 
-                <article class="course-card">
-                    <div class="course-header">
-                        <h3 class="course-title">Advanced CSS Techniques</h3>
-                        <p class="course-description">Explore advanced CSS concepts like Flexbox, Grid, animations,
-                            andresponsive design.</p>
-                    </div>
-                    <div class="course-tail">
-                        <div class="course-meta">
-                            <span class="rating">⭐ 4.6/5</span>
-                            <span class="duration">⏳ 4 hours</span>
-                        </div>
-                        <a class="button" href="#" aria-label="Resume Advanced CSS Techniques course">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            Resume Course
-                        </a>
-                    </div>
-                </article>
-
-                <!-- Course 3: Python for Beginners -->
-                <article class="course-card">
-                    <div class="course-header">
-                        <h3 class="course-title">Python for Beginners</h3>
-                        <p class="course-description">Get started with Python programming, covering syntax, data
-                            structures, and basic algorithms.</p>
-                    </div>
-                    <div class="course-tail">
-                        <div class="course-meta">
-                            <span class="rating">⭐ 4.8/5</span>
-                            <span class="duration">⏳ 5 hours</span>
-                        </div>
-                        <a class="button" href="#" aria-label="Resume React.js Crash Course">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            Resume Course
-                        </a>
-                    </div>
-                </article>
-
-                <!-- Course 4: React.js Crash Course -->
-                <article class="course-card">
-                    <div class="course-header">
-                        <h3 class="course-title">React.js Crash Course</h3>
-                        <p class="course-description">Build modern web applications with React.js, including hooks,
-                            state management, and routing.</p>
-                    </div>
-                    <div class="course-tail">
-                        <div class="course-meta">
-                            <span class="rating">⭐ 4.9/5</span>
-                            <span class="duration">⏳ 6 hours</span>
-                        </div>
-                        <a class="button" href="#" aria-label="Resume React.js Crash Course">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            Resume Course
-                        </a>
-                    </div>
-                </article>
             </div>
 
         </section>
@@ -198,6 +114,8 @@
 
         </div>
     </main>
+
+    <script src="../js/dashboard.js"></script>
 </body>
 
 </html>

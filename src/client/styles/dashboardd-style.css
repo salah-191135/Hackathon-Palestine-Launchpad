@@ -11,7 +11,7 @@ html {
 }
 
 body {
-    font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+    font-family: 'monospace', system-ui, -apple-system, sans-serif !important;
     line-height: 1.6;
     color: #2d3748;
     background-color: #edf2f7;
@@ -19,19 +19,27 @@ body {
 
 .learning-hub {
     display: grid;
-    grid-template-rows: repeat(10, 1fr);
+    grid-template-rows: repeat(17, 1fr);
     grid-template-columns: repeat(17, 1fr);
     gap: 0;
     width: 100vw;
     height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: none;
 }
 
 #sidebar {
-    grid-area: 1 / 1 / 11 / 2;
+    /* grid-area: 7 / 1 / 18 / 2; */
     background: linear-gradient(180deg, #30A8D0, #30A8D0);
     border-radius: 30px;
-    width: 80%;
-    margin: 10%;
+    width: 4%;
+    /* margin: 10%; */
+    height: 55% !important;
+    position: absolute;
+    display: flex;
+    top: 42%;
+    left: 10px;
 }
 
 #sidebar .nav-list {
@@ -74,7 +82,7 @@ body {
 }
 
 #profile {
-    grid-area: 1 / 2 / 4 / 18;
+    grid-area: 1 / 1 / 7 / 18;
     background-color: #edf2f7;
     border-bottom: 3px solid #ff8b00;
     display: flex;
@@ -128,16 +136,22 @@ body {
 }
 
 .stat-item {
-    background-color: #8a84674e;
+    background-color: #974f195e;
     padding: 1rem;
     border-radius: 8px;
     border: 1px solid #e2e8f0;
     transition: background-color 0.3s ease;
     height: 160px;
+    color: #ffffff;
 }
 
 .stat-item:hover {
     background-color: #30A8D0;
+    /* color: #ffffff !important; */
+}
+
+.stat-item:hover * {
+    /* background-color: #30A8D0; */
     color: #ffffff !important;
 }
 
@@ -145,6 +159,10 @@ body {
     font-weight: 700;
     color: #2c3e50;
     font-size: 1.7rem;
+}
+
+.stat-label:hover {
+    color: #ffffff;
 }
 
 .stat-details {
@@ -159,11 +177,11 @@ body {
 }
 
 #recommendations {
-    grid-area: 4 / 2 / 11 / 14;
+    grid-area: 7 / 2 / 18 / 14;
     background-color: #edf2f7;
     padding: 3%;
-    overflow-y: scroll;
-    scrollbar-width: none;
+    /* overflow-y: scroll;
+    scrollbar-width: none; */
 }
 
 #recommendations .section-header {
@@ -195,8 +213,10 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
+    justify-content: space-evenly;
     gap: 1rem;
     width: 100%;
+
 }
 
 #recommendations .course-card:hover {
@@ -223,6 +243,7 @@ body {
     font-size: 1.2rem;
     color: #2c3e50;
     margin: 0;
+    padding: 1rem;
 }
 
 #recommendations .course-card .course-tail {
@@ -237,25 +258,29 @@ body {
     font-size: 1.2rem;
     color: #2c3e50;
     justify-content: center;
+    text-align: center;
+    font-weight: 700;
+    /* font-family: monospace; */
 }
 
 #extra {
-    grid-area: 4 / 14 / 11 / 18;
+    grid-area: 7 / 14 / 18 / 18;
     background-color: #edf2f7;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     padding: 5%;
+    margin-top: 26px;
 }
 
 #extra .stats-box {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 7px;
     align-items: center;
     width: 100%;
-    height: 60%;
-    margin: 0 0 19% 0;
+    height: 100%;
+    margin: 0 0 31% 0;
 }
 
 #extra .stats-box h1 {
@@ -267,15 +292,16 @@ body {
 #extra .stats-box .s-box {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 6px;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 15px 20px;
     width: 100%;
     text-align: center;
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.2sease-in-out;
     height: 100px;
     justify-content: space-evenly;
+    margin: 30px;
 }
 
 #extra .stats-box .s-box:hover {

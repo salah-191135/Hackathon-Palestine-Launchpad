@@ -91,10 +91,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 username: username,
                 email: email,
                 password: password,
-                yob: yob,
+                YoB: yob,
                 gender: gender,
-                degree: degree,
-                interest: interest
+                LoE_DI: degree,
+                course_field_mapping: interest
             };
             console.log('Form data:', formData);
 
@@ -194,7 +194,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 .catch(error => {
                     console.error('Error during signin:', error);
                     let errMsg = document.createElement('p');
-                    errMsg.textContent = "An error occurred while signing in. Please try again.";
+                    errMsg.textContent = "there is no such user.please enter correct email and password";
                     errMsg.style.color = "red";
                     errorContainer.appendChild(errMsg);
                 });
